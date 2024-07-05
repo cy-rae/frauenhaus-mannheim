@@ -18,22 +18,3 @@ dependencies {
 test {
     useJUnitPlatform()
 }
-
-sonarqube {
-    properties {
-        property "sonar.projectKey", "frauenhaus-mannheim"
-        property "sonar.projectName", "Frauenhaus Mannheim"
-        property "sonar.projectVersion", "1.0"
-
-        property "sonar.host.url", "http://localhost:9000"
-
-        // initialize sonar modules with all app modules that include the java-plugin
-        property "sonar.modules", subprojects.findAll { it.pluginManager.hasPlugin('java') }.collect { it.name }.join(',')
-
-        // config sonar modules
-        subprojects.each { subproject ->
-            property "${subproject.name}.sonar.projectName", subproject.name
-            property "${subproject.name}.sonar.projectBaseDir", subproject.projectDir
-        }
-    }
-}
