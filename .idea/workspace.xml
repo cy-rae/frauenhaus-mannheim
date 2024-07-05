@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4df72265-2773-4836-ba4c-9db8552241e9" name="Changes" comment="adapted sonar config" />
+    <list default="true" id="4df72265-2773-4836-ba4c-9db8552241e9" name="Changes" comment="adapted workspace.xml">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database_core/src/main/java/com/fh_ma/database_core/entities/Callable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database_core/src/main/java/com/fh_ma/database_core/entities/Entity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database_core/src/main/java/com/fh_ma/database_core/entities/TestEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database_core/src/main/java/com/fh_ma/database_core/repositories/Repository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database_core/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/database_core/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database_core/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/database_core/src/main/resources/application.properties" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,6 +45,14 @@
       </state>
     </system>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -53,8 +70,13 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
@@ -65,6 +87,12 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "sqlserver.localdb",
+      "sqlserver"
+    ]
   }
 }]]></component>
   <component name="RunDashboard">
@@ -141,7 +169,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1720171910798</updated>
-      <workItem from="1720171911818" duration="3074000" />
+      <workItem from="1720171911818" duration="7445000" />
     </task>
     <task id="LOCAL-00001" summary="inital commit">
       <option name="closed" value="true" />
@@ -167,7 +195,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720178047454</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="adapted workspace.xml">
+      <option name="closed" value="true" />
+      <created>1720178087171</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1720178087171</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -176,6 +212,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="inital commit" />
     <MESSAGE value="adapted sonar config" />
-    <option name="LAST_COMMIT_MESSAGE" value="adapted sonar config" />
+    <MESSAGE value="adapted workspace.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="adapted workspace.xml" />
   </component>
 </project>
