@@ -1,0 +1,4 @@
+rootProject.name = 'frauenhaus_mannheim'
+
+include('database_core')
+include('report_service')

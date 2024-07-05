@@ -1,0 +1,42 @@
+plugins {
+    id 'java'
+    id "org.sonarqube" version "5.0.0.4638"
+}
+
+group = 'org.dhbw_cas'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+sonarqube {
+    properties {
+        property "sonar.projectKey", "frauenhaus-mannheim"
+        property "sonar.projectName", "Frauenhaus Mannheim"
+        property "sonar.projectVersion", "1.0"
+
+        property "sonar.host.url", "http://localhost:9000"
+
+        // Definiere die Liste der zu analysierenden Module
+        def modulesToAnalyze = ["database_core", "report_service"]
+
+        // Setze die sonar.modules Eigenschaft auf die ausgewählten Module
+        property "sonar.modules", modulesToAnalyze.join(',')
+
+        // Optional: zusätzliche Konfigurationen für jedes ausgewählte Modul
+        subprojects.findAll { it.name in modulesToAnalyze }.each { subproject ->
+            property "${subproject.name}.sonar.projectName", subproject.name
+            property "${subproject.name}.sonar.projectBaseDir", subproject.projectDir
+        }
+    }
+}
