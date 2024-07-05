@@ -27,14 +27,11 @@ sonarqube {
 
         property "sonar.host.url", "http://localhost:9000"
 
-        // Definiere die Liste der zu analysierenden Module
-        def modulesToAnalyze = ["database_core", "report_service"]
+        // initialize sonar modules with all app modules that include the java-plugin
+        property "sonar.modules", subprojects.findAll { it.pluginManager.hasPlugin('java') }.collect { it.name }.join(',')
 
-        // Setze die sonar.modules Eigenschaft auf die ausgewählten Module
-        property "sonar.modules", modulesToAnalyze.join(',')
-
-        // Optional: zusätzliche Konfigurationen für jedes ausgewählte Modul
-        subprojects.findAll { it.name in modulesToAnalyze }.each { subproject ->
+        // config sonar modules
+        subprojects.each { subproject ->
             property "${subproject.name}.sonar.projectName", subproject.name
             property "${subproject.name}.sonar.projectBaseDir", subproject.projectDir
         }
